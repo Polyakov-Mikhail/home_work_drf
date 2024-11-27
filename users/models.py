@@ -28,3 +28,32 @@ class User(AbstractUser):
     class Meta:
         verbose_name = "Пользователь"
         verbose_name_plural = "Пользователи"
+
+
+class Payment(models.Model):
+
+    user = models.ForeignKey(
+        "users.User", on_delete=models.CASCADE, related_name="payments", **NULLABLE
+    )
+    payment_date = models.DateField(verbose_name="Дата платежа", **NULLABLE)
+    payment_lesson = models.ForeignKey(
+        "lms.Lesson", on_delete=models.CASCADE, **NULLABLE, related_name="payments"
+    )
+    payment_course = models.ForeignKey(
+        "lms.Course", on_delete=models.CASCADE, **NULLABLE, related_name="payments"
+    )
+    amount = models.PositiveIntegerField(verbose_name="Сумма оплаты", default=0)
+    CASH = "cash"
+    NON_CASH = "non_cash"
+    PAYMENT_METHOD = [(CASH, "cash"), (NON_CASH, "non_cash")]
+    payment_method = models.CharField(
+        choices=PAYMENT_METHOD, default=CASH, verbose_name="Способ оплаты"
+    )
+
+    def __str__(self):
+        return f"{self.amount} - {self.payment_method}"
+
+    class Meta:
+        verbose_name = "Платеж"
+        verbose_name_plural = "Платежи"
+        ordering = ("-payment_date",)
