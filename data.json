@@ -1,1 +1,876 @@
-[{"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add content type", "content_type": 4, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change content type", "content_type": 4, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete content type", "content_type": 4, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view content type", "content_type": 4, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add session", "content_type": 5, "codename": "add_session"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change session", "content_type": 5, "codename": "change_session"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete session", "content_type": 5, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view session", "content_type": 5, "codename": "view_session"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add Пользователь", "content_type": 6, "codename": "add_user"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change Пользователь", "content_type": 6, "codename": "change_user"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete Пользователь", "content_type": 6, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view Пользователь", "content_type": 6, "codename": "view_user"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add Курс", "content_type": 7, "codename": "add_course"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change Курс", "content_type": 7, "codename": "change_course"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete Курс", "content_type": 7, "codename": "delete_course"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view Курс", "content_type": 7, "codename": "view_course"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add Урок", "content_type": 8, "codename": "add_lesson"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change Урок", "content_type": 8, "codename": "change_lesson"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete Урок", "content_type": 8, "codename": "delete_lesson"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view Урок", "content_type": 8, "codename": "view_lesson"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add Платеж", "content_type": 9, "codename": "add_payment"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change Платеж", "content_type": 9, "codename": "change_payment"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete Платеж", "content_type": 9, "codename": "delete_payment"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view Платеж", "content_type": 9, "codename": "view_payment"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "users", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "lms", "model": "course"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "lms", "model": "lesson"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "users", "model": "payment"}}, {"model": "users.user", "pk": 1, "fields": {"password": "123456", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2024-11-27T08:53:43.509Z", "email": "Polyakov@gmail.com", "phone": "89111111111", "city": "Екатеринбург", "avatar": "", "groups": [], "user_permissions": []}}, {"model": "users.user", "pk": 2, "fields": {"password": "123456", "last_login": null, "is_superuser": false, "first_name": "", "last_name": "", "is_staff": false, "is_active": true, "date_joined": "2024-11-27T08:54:14.736Z", "email": "Ivanov@gmail.com", "phone": "89111111112", "city": "Екатеринбург", "avatar": "", "groups": [], "user_permissions": []}}, {"model": "users.user", "pk": 3, "fields": {"password": "qwerty", "last_login": null, "is_superuser": true, "first_name": "", "last_name": "", "is_staff": true, "is_active": true, "date_joined": "2024-11-27T09:01:12.663Z", "email": "test@example.com", "phone": null, "city": null, "avatar": "", "groups": [], "user_permissions": []}}, {"model": "users.payment", "pk": 1, "fields": {"user": null, "payment_date": null, "payment_lesson": null, "payment_course": null, "amount": 0, "payment_method": "cash"}}, {"model": "users.payment", "pk": 2, "fields": {"user": 3, "payment_date": "2022-01-01", "payment_lesson": null, "payment_course": 1, "amount": 100, "payment_method": "cash"}}, {"model": "users.payment", "pk": 3, "fields": {"user": 3, "payment_date": "2022-10-01", "payment_lesson": 1, "payment_course": 1, "amount": 50, "payment_method": "cash"}}, {"model": "users.payment", "pk": 4, "fields": {"user": 3, "payment_date": "2024-09-12", "payment_lesson": 2, "payment_course": 1, "amount": 60, "payment_method": "non_cash"}}, {"model": "users.payment", "pk": 5, "fields": {"user": 1, "payment_date": "2024-11-20", "payment_lesson": 1, "payment_course": null, "amount": 1000, "payment_method": "cash"}}, {"model": "users.payment", "pk": 6, "fields": {"user": 1, "payment_date": "2024-11-21", "payment_lesson": 2, "payment_course": null, "amount": 2000, "payment_method": "cash"}}, {"model": "users.payment", "pk": 7, "fields": {"user": 1, "payment_date": "2024-11-22", "payment_lesson": 3, "payment_course": null, "amount": 3000, "payment_method": "cash"}}, {"model": "users.payment", "pk": 8, "fields": {"user": 2, "payment_date": "2024-10-22", "payment_lesson": 1, "payment_course": null, "amount": 1000, "payment_method": "cash"}}, {"model": "users.payment", "pk": 9, "fields": {"user": 3, "payment_date": "2024-11-25", "payment_lesson": null, "payment_course": 1, "amount": 10000, "payment_method": "cash"}}, {"model": "users.payment", "pk": 10, "fields": {"user": 3, "payment_date": "2024-11-25", "payment_lesson": null, "payment_course": 1, "amount": 20000, "payment_method": "cash"}}, {"model": "lms.course", "pk": 1, "fields": {"title": "Повторный курс", "preview": "", "description": "Вы погрузитесь в этот курс (с изменениями)", "owner": null}}, {"model": "lms.course", "pk": 2, "fields": {"title": "Дополнительный курс", "preview": "", "description": "Для тех, кому мало", "owner": null}}, {"model": "lms.lesson", "pk": 1, "fields": {"title": "урок1", "description": "Вы погрузитесь в этот урок", "preview": "", "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements", "course": 1, "owner": null}}, {"model": "lms.lesson", "pk": 2, "fields": {"title": "урок2", "description": "продолжение урока 1", "preview": "", "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements", "course": 1, "owner": null}}, {"model": "lms.lesson", "pk": 3, "fields": {"title": "урок3", "description": "продолжение урока 3", "preview": "", "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements", "course": 1, "owner": null}}, {"model": "lms.lesson", "pk": 4, "fields": {"title": "урок4", "description": "Последний урок курса", "preview": "", "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements", "course": 1, "owner": null}}, {"model": "lms.lesson", "pk": 5, "fields": {"title": "урок5", "description": "Повтор материала", "preview": "", "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements", "course": 1, "owner": null}}, {"model": "lms.lesson", "pk": 6, "fields": {"title": "Урок 2.1", "description": "Вводный", "preview": "", "link_to_video": "https://www.youtube.com/", "course": 2, "owner": null}}, {"model": "lms.lesson", "pk": 7, "fields": {"title": "Урок 2.2", "description": "заключительный", "preview": "", "link_to_video": "https://www.youtube.com/", "course": 2, "owner": null}}]
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-11-28T13:34:24.936Z",
+      "user": 10,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moders",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-11-28T13:34:38.555Z",
+      "user": 10,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Polyakov@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-11-28T13:37:59.143Z",
+      "user": 10,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moders",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-11-28T13:39:09.365Z",
+      "user": 10,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "moderator",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-11-28T13:39:16.363Z",
+      "user": 10,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Polyakov@gmail.com",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2024-11-28T13:56:10.560Z",
+      "user": 10,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Polyakov@gmail.com",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2024-11-28T13:56:15.776Z",
+      "user": 10,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Polyakov@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2024-11-28T13:56:35.518Z",
+      "user": 10,
+      "content_type": 6,
+      "object_id": "12",
+      "object_repr": "testov2@tast.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add Пользователь",
+      "content_type": 6,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change Пользователь",
+      "content_type": 6,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete Пользователь",
+      "content_type": 6,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view Пользователь",
+      "content_type": 6,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Курс",
+      "content_type": 7,
+      "codename": "add_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Курс",
+      "content_type": 7,
+      "codename": "change_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Курс",
+      "content_type": 7,
+      "codename": "delete_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Курс",
+      "content_type": 7,
+      "codename": "view_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Урок",
+      "content_type": 8,
+      "codename": "add_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Урок",
+      "content_type": 8,
+      "codename": "change_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Урок",
+      "content_type": 8,
+      "codename": "delete_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Урок",
+      "content_type": 8,
+      "codename": "view_lesson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Платеж",
+      "content_type": 9,
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Платеж",
+      "content_type": 9,
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Платеж",
+      "content_type": 9,
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Платеж",
+      "content_type": 9,
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "moderator",
+      "permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "lms",
+      "model": "course"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "lms",
+      "model": "lesson"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "users",
+      "model": "payment"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cwyckbhvd046t290pyh092voeezh3xsm",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQRP-FsyGw2xbx6N1vIAssUjWQlPZk-u9tkx40c5v3Zr7C0TJntzSe3BjFTWglLr-lp_DmcpD4ovKsMtQyT6OXhyJP2uSjRv7cT_fvIFPL-5ojX_sU9vgelSbwQKxhGDQxGMUqhWgtd2A0mkBkLCRE9EjcWTAg1g0xUziB:1tGcay:FaWnmWsz5JSw6_eko3efpobNTDp1FGXtdjT6m-3B1BE",
+      "expire_date": "2024-12-12T11:22:04.462Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-27T08:53:43Z",
+      "email": "Polyakov@gmail.com",
+      "phone": "89111111111",
+      "city": "Екатеринбург",
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "123456",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-27T08:54:14.736Z",
+      "email": "Ivanov@gmail.com",
+      "phone": "89111111112",
+      "city": "Екатеринбург",
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "qwerty",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-27T09:01:12.663Z",
+      "email": "test@example.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$bnVdrFBvDD6oICcmoQBu5c$MmpNxmXWeH0zQRFYN5LiWjg+fyBkgfoS1eeSUmctwTg=",
+      "last_login": "2024-11-28T11:22:04.459Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-28T09:09:42.381Z",
+      "email": "admin@example.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$s7MjcM2MJ34T368tCnZm9C$VDt2uncvKjW8Ihm1oN6FeT0L1IE9N8MtwpvsFrDy/P4=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-28T10:20:02.900Z",
+      "email": "testov1@tast.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$Op3GPj40zUEXeLZ9mE50U3$uqrgTkrn+B5h+H/FWhZdWkfT8JIi/i++PMdv8vcdbZ8=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-28T10:37:37Z",
+      "email": "testov2@tast.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 1,
+    "fields": {
+      "user": null,
+      "payment_date": null,
+      "payment_lesson": null,
+      "payment_course": null,
+      "amount": 0,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "payment_date": "2022-01-01",
+      "payment_lesson": null,
+      "payment_course": 1,
+      "amount": 100,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "payment_date": "2022-10-01",
+      "payment_lesson": 1,
+      "payment_course": 1,
+      "amount": 50,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "payment_date": "2024-09-12",
+      "payment_lesson": 2,
+      "payment_course": 1,
+      "amount": 60,
+      "payment_method": "non_cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-11-20",
+      "payment_lesson": 1,
+      "payment_course": null,
+      "amount": 1000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-11-21",
+      "payment_lesson": 2,
+      "payment_course": null,
+      "amount": 2000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-11-22",
+      "payment_lesson": 3,
+      "payment_course": null,
+      "amount": 3000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "payment_date": "2024-10-22",
+      "payment_lesson": 1,
+      "payment_course": null,
+      "amount": 1000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 9,
+    "fields": {
+      "user": 3,
+      "payment_date": "2024-11-25",
+      "payment_lesson": null,
+      "payment_course": 1,
+      "amount": 10000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 10,
+    "fields": {
+      "user": 3,
+      "payment_date": "2024-11-25",
+      "payment_lesson": null,
+      "payment_course": 1,
+      "amount": 20000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "lms.course",
+    "pk": 1,
+    "fields": {
+      "title": "Повторный курс",
+      "preview": "",
+      "description": "Вы погрузитесь в этот курс (с изменениями)",
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.course",
+    "pk": 2,
+    "fields": {
+      "title": "Дополнительный курс",
+      "preview": "",
+      "description": "Для тех, кому мало",
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "урок1",
+      "description": "Вы погрузитесь в этот урок",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 1,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "урок2",
+      "description": "продолжение урока 1",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 1,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 3,
+    "fields": {
+      "title": "урок3",
+      "description": "продолжение урока 3",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 1,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 4,
+    "fields": {
+      "title": "урок4",
+      "description": "Последний урок курса",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 1,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 5,
+    "fields": {
+      "title": "урок5",
+      "description": "Повтор материала",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 1,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 6,
+    "fields": {
+      "title": "Урок 2.1",
+      "description": "Вводный",
+      "preview": "",
+      "link_to_video": "https://www.youtube.com/",
+      "course": 2,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 7,
+    "fields": {
+      "title": "Урок 2.2",
+      "description": "заключительный",
+      "preview": "",
+      "link_to_video": "https://www.youtube.com/",
+      "course": 2,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 8,
+    "fields": {
+      "title": "урок 2.3",
+      "description": "продолжение урока 2.1",
+      "preview": "",
+      "link_to_video": "https://my.sky.pro/student-cabinet/stream-lesson/120010/homework-requirements",
+      "course": 2,
+      "owner": 11
+    }
+  }
+]
