@@ -14,6 +14,7 @@ from users.views import (
     UserDeleteAPIView,
     UserListAPIView,
     UserRetrieveAPIView,
+    SubscriptionCreateApiView,
 )
 
 app_name = UsersConfig.name
@@ -30,6 +31,7 @@ urlpatterns = [
     path("delete/<int:pk>/", UserDeleteAPIView.as_view(), name="user-delete"),
     path("", UserListAPIView.as_view(), name="user-list"),
     path("<int:pk>/", UserRetrieveAPIView.as_view(), name="user-detail"),
+    path("subs/", SubscriptionCreateApiView.as_view(), name="subscription"),
 ]
 
 urlpatterns += router.urls

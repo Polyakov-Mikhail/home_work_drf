@@ -1,6 +1,7 @@
 from rest_framework import viewsets, generics
 
 from lms.models import Course, Lesson
+from lms.paginations import CustomPagination
 from lms.permissions import IsOwnerOrStaff
 from lms.serializers import CourseSerializer, LessonSerializer
 from users.permissions import IsModerator, IsOwner
@@ -10,6 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    pagination_class = CustomPagination
 
     def get_queryset(self):
         user = self.request.user
@@ -61,6 +63,8 @@ class LessonCreateAPIView(generics.CreateAPIView):
 class LessonListAPIView(generics.ListAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
+    pagination_class = CustomPagination
+    permission_classes = (IsModerator | IsOwner, IsAuthenticated)
 
     def get_queryset(self):
         user = self.request.user
@@ -69,13 +73,6 @@ class LessonListAPIView(generics.ListAPIView):
         if user.groups.filter(name="moderator").exists():
             return Lesson.objects.all()
         return Lesson.objects.filter(owner=user)
-
-    def get_permissions(self):
-        if self.request.method == "GET":
-            self.permission_classes = [~IsModerator, IsOwner]
-        else:
-            self.permission_classes = [IsModerator | IsOwner]
-        return super().get_permissions()
 
 
 class LessonRetrieveAPIView(generics.RetrieveAPIView):

@@ -1,11 +1,15 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, generics
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from rest_framework.permissions import AllowAny
+from rest_framework.generics import CreateAPIView
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
 
-from users.serializers import PaymentSerializer, UserSerializer
-from users.models import User, Payment
+from lms.models import Course
+from users.serializers import PaymentSerializer, UserSerializer, SubscriptionSerializer
+from users.models import User, Payment, Subscription
 
 
 class PaymentViewSet(viewsets.ModelViewSet):
@@ -50,3 +54,23 @@ class UserUpdateAPIView(generics.UpdateAPIView):
 
 class UserDeleteAPIView(generics.DestroyAPIView):
     queryset = User.objects.all()
+
+
+class SubscriptionCreateApiView(CreateAPIView):
+    queryset = Subscription.objects.all()
+    serializer_class = SubscriptionSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        user = self.request.user
+        course_id = self.request.data.get('course')
+        course_item = get_object_or_404(Course, pk=course_id)
+        subs_item = Subscription.objects.filter(user=user, course=course_item)
+
+        if subs_item.exists():
+            subs_item.delete()  # Удаляем подписку
+            message = 'подписка удалена'
+        else:
+            Subscription.objects.create(user=user, course=course_item, sign_of_subscription=True)  # Создаем подписку
+            message = 'подписка добавлена'
+        return Response({"message": message})
