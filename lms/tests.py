@@ -2,8 +2,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from lms.models import Lesson, Course
-from users.models import Subscription
+from lms.models import Lesson, Course, Subscription
 from users.models import User
 
 
@@ -178,7 +177,7 @@ class SubscriptionTestCase(APITestCase):
 
     def test_subscription_delete(self):
         self.subscription = Subscription.objects.create(user=self.user, course=self.course)
-        url = reverse('user:subscription')
+        url = reverse('learning:course_subscription')
         data = {
             'user': self.user,
             'course': self.course.pk
@@ -189,5 +188,5 @@ class SubscriptionTestCase(APITestCase):
             response.status_code, status.HTTP_200_OK
         )
         self.assertEqual(
-            data, {'message': 'Подписка удалена'}
+            data, {'message': 'подписка удалена'}
         )
