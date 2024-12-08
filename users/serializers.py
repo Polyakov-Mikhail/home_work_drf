@@ -18,4 +18,3 @@ class SubscriptionSerializer(ModelSerializer):
     class Meta:
         model = Subscription
         fields = "__all__"
-

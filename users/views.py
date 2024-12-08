@@ -1,11 +1,10 @@
-from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, generics
+from rest_framework import viewsets, generics, status
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from lms.models import Course
 from users.serializers import PaymentSerializer, UserSerializer, SubscriptionSerializer
@@ -15,10 +14,22 @@ from users.models import User, Payment, Subscription
 class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
-    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
-    ordering_fields = ('payment_date', 'amount',)
-    search_fields = ('payment_method',)
-    filterset_fields = ('payment_date', 'payment_course', 'payment_lesson', 'payment_method',)
+    filter_backends = [
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        filters.SearchFilter,
+    ]
+    ordering_fields = (
+        "payment_date",
+        "amount",
+    )
+    search_fields = ("payment_method",)
+    filterset_fields = (
+        "payment_date",
+        "payment_course",
+        "payment_lesson",
+        "payment_method",
+    )
 
 
 class PaymentCreateAPIView(generics.CreateAPIView):
@@ -56,7 +67,7 @@ class UserDeleteAPIView(generics.DestroyAPIView):
     queryset = User.objects.all()
 
 
-class SubscriptionCreateApiView(CreateAPIView):
+class SubscriptionAPIView(APIView):
     queryset = Subscription.objects.all()
     serializer_class = SubscriptionSerializer
     permission_classes = (IsAuthenticated,)
@@ -68,9 +79,10 @@ class SubscriptionCreateApiView(CreateAPIView):
         subs_item = Subscription.objects.filter(user=user, course=course_item)
 
         if subs_item.exists():
-            subs_item.delete()  # Удаляем подписку
-            message = 'подписка удалена'
+            subs_item.delete()
+            message = "Подписка удалена"
         else:
-            Subscription.objects.create(user=user, course=course_item, sign_of_subscription=True)  # Создаем подписку
-            message = 'подписка добавлена'
-        return Response({"message": message})
+            Subscription.objects.create(user=user, course=course_item)
+            message = "Подписка добавлена"
+
+        return Response({"message": message}, status=status.HTTP_200_OK)
