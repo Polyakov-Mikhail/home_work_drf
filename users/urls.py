@@ -32,7 +32,7 @@ urlpatterns = [
         name="token_refresh",
     ),
     path("create/", UserCreateAPIView.as_view(), name="user-create"),
-    path("register/create/", PaymentCreateAPIView.as_view(), name="payment-create"),
+    path("payment/create/", PaymentCreateAPIView.as_view(), name="payment-create"),
     path("update/<int:pk>/", UserUpdateAPIView.as_view(), name="user-update"),
     path("delete/<int:pk>/", UserDeleteAPIView.as_view(), name="user-delete"),
     path("", UserListAPIView.as_view(), name="user-list"),
