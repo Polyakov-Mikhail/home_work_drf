@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from users.models import Payment, User, Subscription
+from users.models import Payment, User
 
 
 class PaymentSerializer(ModelSerializer):
@@ -14,7 +14,4 @@ class UserSerializer(ModelSerializer):
         fields = "__all__"
 
 
-class SubscriptionSerializer(ModelSerializer):
-    class Meta:
-        model = Subscription
-        fields = "__all__"
+

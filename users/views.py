@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from lms.models import Course
-from users.serializers import PaymentSerializer, UserSerializer, SubscriptionSerializer
-from users.models import User, Payment, Subscription
+from users.serializers import PaymentSerializer, UserSerializer
+from users.models import User, Payment
 
 
 class PaymentViewSet(viewsets.ModelViewSet):
@@ -65,24 +65,3 @@ class UserUpdateAPIView(generics.UpdateAPIView):
 
 class UserDeleteAPIView(generics.DestroyAPIView):
     queryset = User.objects.all()
-
-
-class SubscriptionAPIView(APIView):
-    queryset = Subscription.objects.all()
-    serializer_class = SubscriptionSerializer
-    permission_classes = (IsAuthenticated,)
-
-    def post(self, request, *args, **kwargs):
-        user = self.request.user
-        course_id = self.request.data.get('course')
-        course_item = get_object_or_404(Course, pk=course_id)
-        subs_item = Subscription.objects.filter(user=user, course=course_item)
-
-        if subs_item.exists():
-            subs_item.delete()
-            message = "Подписка удалена"
-        else:
-            Subscription.objects.create(user=user, course=course_item)
-            message = "Подписка добавлена"
-
-        return Response({"message": message}, status=status.HTTP_200_OK)

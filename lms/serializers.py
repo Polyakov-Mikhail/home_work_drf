@@ -2,8 +2,7 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 from lms.validators import validate_youtube_only
 
-from lms.models import Course, Lesson
-from users.models import Subscription
+from lms.models import Course, Lesson, Subscription
 
 
 class LessonSerializer(ModelSerializer):
