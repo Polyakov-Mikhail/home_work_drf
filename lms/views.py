@@ -8,6 +8,7 @@ from lms.permissions import IsOwnerOrStaff
 from lms.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer
 from users.permissions import IsModerator, IsOwner
 from rest_framework.permissions import IsAuthenticated
+from lms.tasks import course_update
 
 
 class CourseViewSet(viewsets.ModelViewSet):
@@ -36,6 +37,11 @@ class CourseViewSet(viewsets.ModelViewSet):
         else:
             self.permission_classes = [IsOwner]
         return super().get_permissions()
+
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        course_update.delay(instance.pk)
+        return instance
 
 
 class LessonCreateAPIView(generics.CreateAPIView):
